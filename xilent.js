@@ -1472,7 +1472,7 @@ bot.action('/controls', async (ctx) => {
 ❀ ! /delsender ☇ -
    ╰┈➤ Reset Session
 ╰─────────────────────⬣
-━═「 ＸＩＬＥＮＴ ＶＩＰ 」═━
+━═「 ＸＩＬＥＮＴ ＵＰＤＡＴＥ 」═━
 ❀ ! /update ☇ in place
    ╰┈➤ Update Script Otomatis
 ╰─────────────────────⬣</b></blockquote>`;
@@ -1564,7 +1564,7 @@ bot.action('/buges', async (ctx) => {
 
 bot.action('/toolus', async (ctx) => {
     const toolsssMenu = `
-<blockquote><b>〘 Zoro DDoS 〙</b></blockquote>
+<blockquote><b>〘 Xilent DDoS 〙</b></blockquote>
 <blockquote><b>𖤓 pidoras
 𖤓 h2
 𖤓 h2vip
