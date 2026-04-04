@@ -4054,6 +4054,8 @@ bot.hears(/^(\/)?(xforce|xfuck|xios)(\s|$)/i, checkWhatsAppConnection, checkPrem
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
+𖤓 Android: Forclose/Delay
+𖤓 Ios: Blank Click/No Click
 𖤓 Status: Process
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`,
     parse_mode: "HTML",
@@ -4075,6 +4077,8 @@ bot.hears(/^(\/)?(xforce|xfuck|xios)(\s|$)/i, checkWhatsAppConnection, checkPrem
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
+𖤓 Android: Forclose/Delay
+𖤓 Ios: Blank Click/No Click
 𖤓 Status: Success
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`, {
     parse_mode: "HTML",
@@ -4098,6 +4102,8 @@ bot.hears(/^(\/)?(flowx|xdelay)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
+𖤓 Android: Delay Hard
+𖤓 Ios: Delay Super Hard
 𖤓 Status: Process
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`,
     parse_mode: "HTML",
@@ -4119,6 +4125,8 @@ bot.hears(/^(\/)?(flowx|xdelay)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
+𖤓 Android: Delay Hard
+𖤓 Ios: Delay Super Hard
 𖤓 Status: Success
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`, {
     parse_mode: "HTML",
