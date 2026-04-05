@@ -4215,7 +4215,7 @@ async function blankbyambajahat(sock, target) {
   }
 }
 
-async async function AmbaFcNewVIP(sock, target) {
+async function AmbaFcNewVIP(sock, target) {
   await sock.relayMessage(target, {
     viewOnceMessageV2: {
       message: {
@@ -4263,7 +4263,6 @@ async async function AmbaFcNewVIP(sock, target) {
     userJid: target,
     messageId: null
   });
-}
 }
 //-------------- END FUNCTION -------------//
 bot.launch();
