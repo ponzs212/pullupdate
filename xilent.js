@@ -4063,7 +4063,7 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
@@ -4087,7 +4087,7 @@ bot.hears(/^(\/)?(xforce|xcrash|xios)(\s|$)/i, checkWhatsAppConnection, checkPre
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
@@ -4112,7 +4112,7 @@ bot.hears(/^(\/)?(flowx|xdelay|xbuldo)(\s|$)/i, checkWhatsAppConnection, checkPr
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
@@ -4135,7 +4135,7 @@ bot.hears(/^(\/)?(flowx|xdelay|xbuldo)(\s|$)/i, checkWhatsAppConnection, checkPr
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
@@ -4160,7 +4160,7 @@ bot.hears(/^(\/)?(xloli|savage)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
@@ -4183,7 +4183,7 @@ bot.hears(/^(\/)?(xloli|savage)(\s|$)/i, checkWhatsAppConnection, checkPremium, 
     parse_mode: "HTML",
     reply_markup: {
       inline_keyboard: [[
-        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}`, style : "Succes" }
+        { text: "⌜📱⌟ CHECK TARGET", url: `https://wa.me/${q}` }
       ]]
     }
   });
