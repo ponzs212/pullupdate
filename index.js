@@ -1167,7 +1167,7 @@ const pages = [
 ╰───────────────────────╯
 ᝰ.ᐟ Developer : @gaponback 
 • Version : 3.0 ( Fix ) 
-• Info : 70% No Bypass
+• Info : 80% No Bypass
 • System : Auto-Update
 • Status : Online ✔
 Access  : Premium Verified 
